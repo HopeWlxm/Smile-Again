@@ -1,6 +1,7 @@
 package com.lx.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -22,9 +23,9 @@ public class PageController {
 //        return "page-login";
 //    }
 
-    @RequestMapping(value = "page-error")
-    public String showPageError(){
-        return "page-error";
+    @RequestMapping(value = "/admin/{page}")
+    public String showPageError(@PathVariable("page")String page){
+        return page;
     }
 
 }
