@@ -20,7 +20,7 @@
         <h1>Smile Again</h1>
       </div>
       <div class="login-box">
-        <form class="login-form" action="/login" method="post">
+        <form class="login-form" action="login" method="post">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>登录</h3>
           <div class="form-group">
             <label class="control-label">用户名</label>
