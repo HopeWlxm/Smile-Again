@@ -12,14 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * <B>系统名称: </B><BR>
- * <B>模块名称: </B><BR>
- * <B>概要说明: </B><BR>
- *
- * @author MR.Administrator
- * @since 2018年05月10日
- */
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -29,9 +21,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private SysPermissionMapperSysUser sysPermissionMapperSysUser;
 
-//    public ActiveUser authenticat(String userCode, String password) throws Exception {
-//        return null;
-//    }
 
 
     public SysUser querySysUserByUserCode(String userCode) throws Exception {

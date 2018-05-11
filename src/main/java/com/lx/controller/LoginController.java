@@ -7,14 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * <B>系统名称: </B><BR>
- * <B>模块名称: </B><BR>
- * <B>概要说明: </B><BR>
- *
- * @author MR.Administrator
- * @since 2018年05月10日
- */
+
 @Controller
 public class LoginController {
 

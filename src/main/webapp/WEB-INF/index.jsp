@@ -96,7 +96,7 @@
             <ul class="dropdown-menu settings-menu dropdown-menu-right">
                 <li><a class="dropdown-item" href="page-user"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
                 <li><a class="dropdown-item" href="page-user"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-                <li><a class="dropdown-item" href="page-login"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                <li><a class="dropdown-item" href="/logout"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
             </ul>
         </li>
     </ul>
@@ -116,7 +116,7 @@
                     class="app-menu__label">Dashboard</span></a>
         </li>
         <!--有item:update权限才现实修改链接，没有权限则不显示修改链接-->
-        <shiro:hasPermission name="user:add">
+        <shiro:hasPermission name="user:delete">
             <li class="treeview">
                 <a class="app-menu__item" href="#" data-toggle="treeview"><i
                         class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i

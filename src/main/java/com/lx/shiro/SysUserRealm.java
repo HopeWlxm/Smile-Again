@@ -18,14 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <B>系统名称: </B><BR>
- * <B>模块名称: </B><BR>
- * <B>概要说明: </B><BR>
- *
- * @author MR.Administrator
- * @since 2018年05月10日
- */
+
 public class SysUserRealm extends AuthorizingRealm {
 
     @Autowired
