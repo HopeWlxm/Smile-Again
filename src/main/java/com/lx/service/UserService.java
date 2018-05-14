@@ -1,5 +1,6 @@
 package com.lx.service;
 
+import com.lx.common.DataTable;
 import com.lx.po.ActiveUser;
 import com.lx.po.SysPermission;
 import com.lx.po.SysUser;
@@ -16,11 +17,6 @@ import java.util.List;
  */
 public interface UserService {
 
-
-
-    //根据用户的身份和密码进行认证，如果认证成功，返回用户信息
-    //ActiveUser authenticat(String userCode,String password) throws Exception;
-
     //根据用户账号查询用户信息
     SysUser querySysUserByUserCode(String userCode) throws Exception;
 
@@ -29,5 +25,7 @@ public interface UserService {
 
     //根据用户的id查询权限范围的url
     List<SysPermission> findPermissionListByUserId(String userId) throws Exception;
+
+    DataTable queryUserList(int page, int rows ,Integer draw);
 
 }

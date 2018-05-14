@@ -33,7 +33,7 @@
       <div class="row user">
         <div class="col-md-12">
           <div class="profile">
-            <div class="info"><img class="user-img" src="images\48.png">
+            <div class="info"><img class="user-img" src="/images/48.png">
               <h4>John Doe</h4>
               <p>FrontEnd Developer</p>
             </div>

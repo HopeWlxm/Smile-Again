@@ -29,7 +29,7 @@ public class SysUserRealm extends AuthorizingRealm {
 
         //token是用户输入的,根据这个token取出身份信息
         String userCode = (String) token.getPrincipal();
-        System.out.println(userCode);
+        //System.out.println(userCode);
         //根据userCode查询数据库
         SysUser sysUser = null;
         try {
@@ -90,7 +90,6 @@ public class SysUserRealm extends AuthorizingRealm {
         //查询到权限信息，返回授权信息(包括上边的permissions)
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
         simpleAuthorizationInfo.addStringPermissions(permissions);
-
         return simpleAuthorizationInfo;
     }
 

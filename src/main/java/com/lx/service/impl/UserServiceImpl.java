@@ -1,5 +1,8 @@
 package com.lx.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.lx.common.DataTable;
 import com.lx.mapper.SysPermissionMapperSysUser;
 import com.lx.mapper.SysUserMapper;
 import com.lx.po.ActiveUser;
@@ -7,6 +10,7 @@ import com.lx.po.SysPermission;
 import com.lx.po.SysUser;
 import com.lx.po.SysUserExample;
 import com.lx.service.UserService;
+import javafx.scene.chart.PieChart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +46,21 @@ public class UserServiceImpl implements UserService {
 
     public List<SysPermission> findPermissionListByUserId(String userId) throws Exception {
         return sysPermissionMapperSysUser.findPermissionListByUserId(userId);
+    }
+
+    public DataTable queryUserList(int page, int rows , Integer draw) {
+        //分页处理
+        PageHelper.startPage(page,rows);
+        SysUserExample example = new SysUserExample();
+        List<SysUser> list = sysUserMapper.selectByExample(example);
+        //取分页信息
+        PageInfo<SysUser> pageInfo = new PageInfo<SysUser>(list);
+
+        DataTable result = new DataTable();
+        result.setDraw(draw);
+        result.setRecordsTotal((int) pageInfo.getTotal());
+        result.setRecordsFiltered((int) pageInfo.getTotal());
+        result.setData(list);
+        return result;
     }
 }

@@ -18,14 +18,11 @@ public class PageController {
         return "index";
     }
 
-//    @RequestMapping(value = "page-login")
-//    public String showPageLogin(){
-//        return "page-login";
-//    }
-
     @RequestMapping(value = "/admin/{page}")
     public String showPageError(@PathVariable("page")String page){
         return page;
     }
+
+
 
 }
