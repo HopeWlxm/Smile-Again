@@ -7,13 +7,25 @@
     </div>
     <ul class="app-menu">
         <li>
-            <a class="app-menu__item active" href="index"><i class="app-menu__icon fa fa-dashboard"></i><span
+            <a class="app-menu__item active" href="/index"><i class="app-menu__icon fa fa-dashboard"></i><span
                     class="app-menu__label">Dashboard</span></a>
         </li>
-        <shiro:hasPermission name="user:select">
-            <li>
-                <a class="app-menu__item" href="/user/user-list"><i class="app-menu__icon fa fa-address-card"></i><span
-                        class="app-menu__label">User Manager</span></a>
+        <shiro:hasPermission name="user:query">
+            <li class="treeview">
+                <a class="app-menu__item" href="/user/user-list" data-toggle="treeview"><i
+                        class="app-menu__icon fa fa-address-card"></i><span
+                        class="app-menu__label">User Manager</span><i
+                        class="treeview-indicator fa fa-angle-right"></i></a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a class="treeview-item" href="/user/user-list"><i class="icon fa fa-circle-o"></i>
+                            User Query</a>
+                    </li>
+                    <li>
+                        <a class="treeview-item" href="/user/user-add"><i class="icon fa fa-circle-o"></i>
+                            User Add</a>
+                    </li>
+                </ul>
             </li>
         </shiro:hasPermission>
         <li class="treeview">

@@ -87,7 +87,7 @@
             },
             serverSide: true,
             columns: [
-                {"data": 'id'},
+                {"data": 'userid'},
                 {"data": 'usercode'},
                 {"data": 'username'},
                 {"data": 'password'},
