@@ -39,8 +39,8 @@
         </div>
         <ul class="app-breadcrumb breadcrumb side">
             <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-            <li class="breadcrumb-item">Tables</li>
-            <li class="breadcrumb-item active"><a href="#">Data Table</a></li>
+            <li class="breadcrumb-item">User Manager</li>
+            <li class="breadcrumb-item active"><a href="#">Usre Query</a></li>
         </ul>
     </div>
     <div class="row">
